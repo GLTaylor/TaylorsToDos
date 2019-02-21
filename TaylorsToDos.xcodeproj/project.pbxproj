@@ -11,12 +11,12 @@
 		124FD4F2221DBFEB0096770F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F0221DBFEB0096770F /* Main.storyboard */; };
 		124FD4F4221DBFEB0096770F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F3221DBFEB0096770F /* Assets.xcassets */; };
 		124FD4F7221DBFEB0096770F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F5221DBFEB0096770F /* LaunchScreen.storyboard */; };
-		124FD538221EBDC80096770F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD537221EBDC80096770F /* ViewController.swift */; };
-		124FD540221EBE9B0096770F /* TaylorsToDosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */; };
+		124FD548221EC1360096770F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD547221EC1360096770F /* ViewController.swift */; };
+		124FD550221EC1700096770F /* TaylorsToDosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD54F221EC1700096770F /* TaylorsToDosTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		124FD542221EBE9B0096770F /* PBXContainerItemProxy */ = {
+		124FD552221EC1700096770F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 124FD4E1221DBFEB0096770F /* Project object */;
 			proxyType = 1;
@@ -32,10 +32,10 @@
 		124FD4F3221DBFEB0096770F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124FD4F6221DBFEB0096770F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		124FD4F8221DBFEB0096770F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		124FD537221EBDC80096770F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorsToDosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaylorsToDosTests.swift; sourceTree = "<group>"; };
-		124FD541221EBE9B0096770F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		124FD547221EC1360096770F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		124FD54D221EC1700096770F /* TaylorsToDosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorsToDosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		124FD54F221EC1700096770F /* TaylorsToDosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaylorsToDosTests.swift; sourceTree = "<group>"; };
+		124FD551221EC1700096770F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		124FD53A221EBE9B0096770F /* Frameworks */ = {
+		124FD54A221EC1700096770F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				124FD4EB221DBFEB0096770F /* TaylorsToDos */,
-				124FD53E221EBE9B0096770F /* TaylorsToDosTests */,
+				124FD54E221EC1700096770F /* TaylorsToDosTests */,
 				124FD4EA221DBFEB0096770F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				124FD4E9221DBFEB0096770F /* TaylorsToDos.app */,
-				124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */,
+				124FD54D221EC1700096770F /* TaylorsToDosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,16 +90,16 @@
 			isa = PBXGroup;
 			children = (
 				124FD4EC221DBFEB0096770F /* AppDelegate.swift */,
-				124FD537221EBDC80096770F /* ViewController.swift */,
+				124FD547221EC1360096770F /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		124FD53E221EBE9B0096770F /* TaylorsToDosTests */ = {
+		124FD54E221EC1700096770F /* TaylorsToDosTests */ = {
 			isa = PBXGroup;
 			children = (
-				124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */,
-				124FD541221EBE9B0096770F /* Info.plist */,
+				124FD54F221EC1700096770F /* TaylorsToDosTests.swift */,
+				124FD551221EC1700096770F /* Info.plist */,
 			);
 			path = TaylorsToDosTests;
 			sourceTree = "<group>";
@@ -124,22 +124,22 @@
 			productReference = 124FD4E9221DBFEB0096770F /* TaylorsToDos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		124FD53C221EBE9B0096770F /* TaylorsToDosTests */ = {
+		124FD54C221EC1700096770F /* TaylorsToDosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 124FD544221EBE9B0096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */;
+			buildConfigurationList = 124FD554221EC1700096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */;
 			buildPhases = (
-				124FD539221EBE9B0096770F /* Sources */,
-				124FD53A221EBE9B0096770F /* Frameworks */,
-				124FD53B221EBE9B0096770F /* Resources */,
+				124FD549221EC1700096770F /* Sources */,
+				124FD54A221EC1700096770F /* Frameworks */,
+				124FD54B221EC1700096770F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				124FD543221EBE9B0096770F /* PBXTargetDependency */,
+				124FD553221EC1700096770F /* PBXTargetDependency */,
 			);
 			name = TaylorsToDosTests;
 			productName = TaylorsToDosTests;
-			productReference = 124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */;
+			productReference = 124FD54D221EC1700096770F /* TaylorsToDosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +155,7 @@
 					124FD4E8221DBFEB0096770F = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					124FD53C221EBE9B0096770F = {
+					124FD54C221EC1700096770F = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 124FD4E8221DBFEB0096770F;
 					};
@@ -175,7 +175,7 @@
 			projectRoot = "";
 			targets = (
 				124FD4E8221DBFEB0096770F /* TaylorsToDos */,
-				124FD53C221EBE9B0096770F /* TaylorsToDosTests */,
+				124FD54C221EC1700096770F /* TaylorsToDosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		124FD53B221EBE9B0096770F /* Resources */ = {
+		124FD54B221EC1700096770F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,26 +205,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124FD538221EBDC80096770F /* ViewController.swift in Sources */,
+				124FD548221EC1360096770F /* ViewController.swift in Sources */,
 				124FD4ED221DBFEB0096770F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		124FD539221EBE9B0096770F /* Sources */ = {
+		124FD549221EC1700096770F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124FD540221EBE9B0096770F /* TaylorsToDosTests.swift in Sources */,
+				124FD550221EC1700096770F /* TaylorsToDosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		124FD543221EBE9B0096770F /* PBXTargetDependency */ = {
+		124FD553221EC1700096770F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 124FD4E8221DBFEB0096770F /* TaylorsToDos */;
-			targetProxy = 124FD542221EBE9B0096770F /* PBXContainerItemProxy */;
+			targetProxy = 124FD552221EC1700096770F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -368,15 +368,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = TaylorsToDos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.TaylorsToDos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.babbel.TaylorsToDos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = com.babbel.TaylorsToDos.development;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,21 +387,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = TaylorsToDos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.TaylorsToDos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.babbel.TaylorsToDos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = com.babbel.TaylorsToDos.development;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		124FD545221EBE9B0096770F /* Debug */ = {
+		124FD555221EC1700096770F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -420,7 +422,7 @@
 			};
 			name = Debug;
 		};
-		124FD546221EBE9B0096770F /* Release */ = {
+		124FD556221EC1700096770F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -461,11 +463,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		124FD544221EBE9B0096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */ = {
+		124FD554221EC1700096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				124FD545221EBE9B0096770F /* Debug */,
-				124FD546221EBE9B0096770F /* Release */,
+				124FD555221EC1700096770F /* Debug */,
+				124FD556221EC1700096770F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
