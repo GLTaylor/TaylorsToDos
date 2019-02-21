@@ -11,14 +11,19 @@
 		124FD4F2221DBFEB0096770F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F0221DBFEB0096770F /* Main.storyboard */; };
 		124FD4F4221DBFEB0096770F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F3221DBFEB0096770F /* Assets.xcassets */; };
 		124FD4F7221DBFEB0096770F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124FD4F5221DBFEB0096770F /* LaunchScreen.storyboard */; };
-		124FD500221E99AC0096770F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 124FD4FE221E99AC0096770F /* Model.xcdatamodeld */; };
-		124FD523221E9D820096770F /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD522221E9D820096770F /* ToDoTableViewController.swift */; };
-		124FD525221E9E500096770F /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD524221E9E500096770F /* ToDo.swift */; };
-		124FD528221E9FBB0096770F /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD527221E9FBB0096770F /* ToDoViewModel.swift */; };
-		124FD52C221EA8EE0096770F /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD52B221EA8EE0096770F /* CreateViewController.swift */; };
-		124FD52E221EAA150096770F /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD52D221EAA150096770F /* CreateViewModel.swift */; };
-		124FD536221EB0960096770F /* ToDosArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD535221EB0960096770F /* ToDosArray.swift */; };
+		124FD538221EBDC80096770F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD537221EBDC80096770F /* ViewController.swift */; };
+		124FD540221EBE9B0096770F /* TaylorsToDosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		124FD542221EBE9B0096770F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124FD4E1221DBFEB0096770F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 124FD4E8221DBFEB0096770F;
+			remoteInfo = TaylorsToDos;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		124FD4E9221DBFEB0096770F /* TaylorsToDos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaylorsToDos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,17 +32,21 @@
 		124FD4F3221DBFEB0096770F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124FD4F6221DBFEB0096770F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		124FD4F8221DBFEB0096770F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		124FD4FF221E99AC0096770F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		124FD522221E9D820096770F /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
-		124FD524221E9E500096770F /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		124FD527221E9FBB0096770F /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
-		124FD52B221EA8EE0096770F /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		124FD52D221EAA150096770F /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
-		124FD535221EB0960096770F /* ToDosArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosArray.swift; sourceTree = "<group>"; };
+		124FD537221EBDC80096770F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorsToDosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaylorsToDosTests.swift; sourceTree = "<group>"; };
+		124FD541221EBE9B0096770F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		124FD4E6221DBFEB0096770F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124FD53A221EBE9B0096770F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				124FD4EB221DBFEB0096770F /* TaylorsToDos */,
+				124FD53E221EBE9B0096770F /* TaylorsToDosTests */,
 				124FD4EA221DBFEB0096770F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				124FD4E9221DBFEB0096770F /* TaylorsToDos.app */,
+				124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				124FD52A221EA57F0096770F /* ViewController */,
-				124FD529221E9FD40096770F /* View Model */,
-				124FD526221E9FA50096770F /* Model */,
 				124FD4F0221DBFEB0096770F /* Main.storyboard */,
 				124FD4F3221DBFEB0096770F /* Assets.xcassets */,
 				124FD4F5221DBFEB0096770F /* LaunchScreen.storyboard */,
@@ -77,33 +86,22 @@
 			path = TaylorsToDos;
 			sourceTree = "<group>";
 		};
-		124FD526221E9FA50096770F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				124FD524221E9E500096770F /* ToDo.swift */,
-				124FD4FE221E99AC0096770F /* Model.xcdatamodeld */,
-				124FD535221EB0960096770F /* ToDosArray.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		124FD529221E9FD40096770F /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				124FD527221E9FBB0096770F /* ToDoViewModel.swift */,
-				124FD52D221EAA150096770F /* CreateViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
 		124FD52A221EA57F0096770F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				124FD4EC221DBFEB0096770F /* AppDelegate.swift */,
-				124FD522221E9D820096770F /* ToDoTableViewController.swift */,
-				124FD52B221EA8EE0096770F /* CreateViewController.swift */,
+				124FD537221EBDC80096770F /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		124FD53E221EBE9B0096770F /* TaylorsToDosTests */ = {
+			isa = PBXGroup;
+			children = (
+				124FD53F221EBE9B0096770F /* TaylorsToDosTests.swift */,
+				124FD541221EBE9B0096770F /* Info.plist */,
+			);
+			path = TaylorsToDosTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +124,24 @@
 			productReference = 124FD4E9221DBFEB0096770F /* TaylorsToDos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		124FD53C221EBE9B0096770F /* TaylorsToDosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124FD544221EBE9B0096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */;
+			buildPhases = (
+				124FD539221EBE9B0096770F /* Sources */,
+				124FD53A221EBE9B0096770F /* Frameworks */,
+				124FD53B221EBE9B0096770F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				124FD543221EBE9B0096770F /* PBXTargetDependency */,
+			);
+			name = TaylorsToDosTests;
+			productName = TaylorsToDosTests;
+			productReference = 124FD53D221EBE9B0096770F /* TaylorsToDosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +154,10 @@
 				TargetAttributes = {
 					124FD4E8221DBFEB0096770F = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					124FD53C221EBE9B0096770F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 124FD4E8221DBFEB0096770F;
 					};
 				};
 			};
@@ -155,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				124FD4E8221DBFEB0096770F /* TaylorsToDos */,
+				124FD53C221EBE9B0096770F /* TaylorsToDosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +191,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		124FD53B221EBE9B0096770F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -177,18 +205,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124FD52E221EAA150096770F /* CreateViewModel.swift in Sources */,
-				124FD528221E9FBB0096770F /* ToDoViewModel.swift in Sources */,
+				124FD538221EBDC80096770F /* ViewController.swift in Sources */,
 				124FD4ED221DBFEB0096770F /* AppDelegate.swift in Sources */,
-				124FD536221EB0960096770F /* ToDosArray.swift in Sources */,
-				124FD52C221EA8EE0096770F /* CreateViewController.swift in Sources */,
-				124FD523221E9D820096770F /* ToDoTableViewController.swift in Sources */,
-				124FD500221E99AC0096770F /* Model.xcdatamodeld in Sources */,
-				124FD525221E9E500096770F /* ToDo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124FD539221EBE9B0096770F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				124FD540221EBE9B0096770F /* TaylorsToDosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		124FD543221EBE9B0096770F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 124FD4E8221DBFEB0096770F /* TaylorsToDos */;
+			targetProxy = 124FD542221EBE9B0096770F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		124FD4F0221DBFEB0096770F /* Main.storyboard */ = {
@@ -331,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9UM7VLDXC;
+				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = TaylorsToDos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9UM7VLDXC;
+				DEVELOPMENT_TEAM = 7248DZM5YC;
 				INFOPLIST_FILE = TaylorsToDos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +397,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		124FD545221EBE9B0096770F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7248DZM5YC;
+				INFOPLIST_FILE = TaylorsToDosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.TaylorsToDosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaylorsToDos.app/TaylorsToDos";
+			};
+			name = Debug;
+		};
+		124FD546221EBE9B0096770F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7248DZM5YC;
+				INFOPLIST_FILE = TaylorsToDosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taylor-Lindsay-at-Babbel.TaylorsToDosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaylorsToDos.app/TaylorsToDos";
 			};
 			name = Release;
 		};
@@ -383,20 +461,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		124FD4FE221E99AC0096770F /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				124FD4FF221E99AC0096770F /* CoreDataModel.xcdatamodel */,
+		124FD544221EBE9B0096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124FD545221EBE9B0096770F /* Debug */,
+				124FD546221EBE9B0096770F /* Release */,
 			);
-			currentVersion = 124FD4FF221E99AC0096770F /* CoreDataModel.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End XCVersionGroup section */
+/* End XCConfigurationList section */
 	};
 	rootObject = 124FD4E1221DBFEB0096770F /* Project object */;
 }
