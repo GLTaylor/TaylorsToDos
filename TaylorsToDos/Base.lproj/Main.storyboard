@@ -10,16 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--To Dos View Controller-->
         <scene sceneID="69A-5K-J2B">
             <objects>
-                <viewController id="XZz-db-y2g" customClass="ViewController" customModule="TaylorsToDos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XZz-db-y2g" customClass="ToDosViewController" customModule="TaylorsToDos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QBd-1O-0Iw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zZN-ux-XKC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellData" id="wHK-fI-jSd" userLabel="CellData">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wHK-fI-jSd" id="8vD-au-Vke" customClass="CellData" customModule="TaylorsToDos" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Gi-VV-rXf" firstAttribute="trailing" secondItem="zZN-ux-XKC" secondAttribute="trailing" id="3f8-7j-43P"/>
+                            <constraint firstItem="zZN-ux-XKC" firstAttribute="leading" secondItem="4Gi-VV-rXf" secondAttribute="leading" id="6Wr-Zw-XfA"/>
+                            <constraint firstItem="4Gi-VV-rXf" firstAttribute="trailing" secondItem="zZN-ux-XKC" secondAttribute="trailing" id="YCQ-CJ-N57"/>
+                            <constraint firstItem="zZN-ux-XKC" firstAttribute="leading" secondItem="4Gi-VV-rXf" secondAttribute="leading" id="bsY-Gt-yh2"/>
+                            <constraint firstItem="4Gi-VV-rXf" firstAttribute="bottom" secondItem="zZN-ux-XKC" secondAttribute="bottom" id="e26-mb-hzG"/>
+                            <constraint firstItem="4Gi-VV-rXf" firstAttribute="bottom" secondItem="zZN-ux-XKC" secondAttribute="bottom" id="fc4-bU-Je2"/>
+                            <constraint firstItem="zZN-ux-XKC" firstAttribute="top" secondItem="4Gi-VV-rXf" secondAttribute="top" id="o2s-rF-T9N"/>
+                            <constraint firstItem="zZN-ux-XKC" firstAttribute="top" secondItem="4Gi-VV-rXf" secondAttribute="top" id="xP8-TW-wEh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Gi-VV-rXf"/>
                     </view>
+                    <connections>
+                        <outlet property="toDosTable" destination="zZN-ux-XKC" id="4E0-7H-Ywk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5g-7Q-yhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
