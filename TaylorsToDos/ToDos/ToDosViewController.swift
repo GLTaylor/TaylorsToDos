@@ -12,9 +12,12 @@ import UIKit
 class ToDosViewController: UIViewController, ToDosViewModelDelegate {
     var arrayToUse: [ToDo] = []
     
-    var viewModel = ToDosViewModel(database: ToDosDataBase())
-    var arrayForVC: [ToDo]?
-
+    var mainToDosDatabase: ToDosDataBase? {
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        return delegate?.allToDosDataBase
+    }
+    
+    var viewModel: ToDosViewModel!
 
     @IBOutlet var toDosTable: UITableView!
     
@@ -22,17 +25,21 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         super.viewDidLoad()
         toDosTable.delegate = self
         toDosTable.dataSource = self
+        viewModel = ToDosViewModel(database: mainToDosDatabase!)
         viewModel.delegate = self
-        viewModel.start()
-        toDosTable.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel.start()
+        toDosTable.reloadData()
+        print(arrayToUse)
+    }
     
     func dataIsReady() {
       print("The array to use is: \(self.arrayToUse)")
       toDosTable.reloadData()
-    }
-    
+    }    
 }
 
 extension ToDosViewController: UITableViewDelegate, UITableViewDataSource {

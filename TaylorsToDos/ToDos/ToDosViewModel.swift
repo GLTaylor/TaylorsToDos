@@ -10,16 +10,14 @@ import Foundation
 
 class ToDosViewModel {
     var delegate: ToDosViewModelDelegate?
-    var countToDos: Int = 0 
     private var array: [ToDo] = [] {
         didSet {
-            self.countToDos = array.count
             self.delegate?.arrayToUse = array
         }
     }
-    private let db: ToDosDataBase
+    private let db: ToDosDataBaseProtocol
  
-    init(database: ToDosDataBase) {
+    init(database: ToDosDataBaseProtocol) {
         self.db = database
     }
     
@@ -30,7 +28,6 @@ class ToDosViewModel {
             }
             self.array = data
             self.delegate?.dataIsReady()
-            print(self.array)
         }
     }
     

@@ -7,28 +7,68 @@
 //
 
 import XCTest
+@testable import TaylorsToDos
 
 class TaylorsToDosTests: XCTestCase {
+    
+    var sut: ToDosViewModel!
+    var dataMock: ToDosDataBaseMock!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        dataMock = ToDosDataBaseMock()
+        sut = ToDosViewModel(database: dataMock)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        dataMock = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssert(true)
+    func testToDosAppear() {
+        // given
+        sut.start()
+        // when app is started up
+        XCTAssertTrue(dataMock.dataToDos.count == 3)
+        // then threre are three to do's in the database
     }
 
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
+    func testPerformanceExample() {
+        // given
+        let toDoFake = ToDo(title: "Fake", completed: true)
+//        sut.delegate = ToDosDelegateMock()
+        sut.start()
+        dataMock.addToDoToData(newToDo: toDoFake)
+        // when a new To Do is added
+        XCTAssertTrue(dataMock.dataToDos.count == 4)
+        // then to do's data is increased by one
+    }
 
+}
+
+class ToDosDataBaseMock: ToDosDataBaseProtocol {
+    var dataToDos: [ToDo] = [ToDo(title: "first", completed: false), ToDo(title: "second", completed: true), ToDo(title: "third", completed: false)]
+    
+    func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void) {
+        completionHandler(dataToDos, nil)
+    }
+    
+    func addToDoToData(newToDo: ToDo) {
+        dataToDos.append(newToDo)
+        print("A new To do was added!")
+    }
+}
+
+// Not in use: not sure if it helps.
+class ToDosDelegateMock: ToDosViewModelDelegate {
+    var db: ToDosDataBaseMock!
+    var arrayToUse: [ToDo]
+    init() {
+        self.db = ToDosDataBaseMock()
+        self.arrayToUse = db.dataToDos
+    }
+    
+    
+    func dataIsReady() {
+        
+    }
 }
