@@ -31,6 +31,11 @@ class ToDosViewModel {
         }
     }
     
+    func deleteToDo(toDoToDeleteIndex: Int) {
+        self.array.remove(at: toDoToDeleteIndex)
+        db.removeToDoData(byeToDoIndex: toDoToDeleteIndex)
+    }
+    
 }
 
 protocol ToDosViewModelDelegate {

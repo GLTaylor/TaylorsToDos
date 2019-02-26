@@ -20,6 +20,12 @@ class ToDosDataBase: ToDosDataBaseProtocol {
         dataToDos.append(newToDo)
         print("A new To do was added!")
     }
+    
+    func removeToDoData(byeToDoIndex: Int) {
+        dataToDos.remove(at: byeToDoIndex)
+        print("A To Do was removed")
+    }
+    
 }
 
 protocol ToDosDataBaseProtocol {
@@ -27,5 +33,6 @@ protocol ToDosDataBaseProtocol {
     
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void)
     func addToDoToData(newToDo: ToDo)
+    func removeToDoData(byeToDoIndex: Int)
     
 }

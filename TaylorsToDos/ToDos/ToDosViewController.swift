@@ -25,7 +25,7 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         super.viewDidLoad()
         toDosTable.delegate = self
         toDosTable.dataSource = self
-        viewModel = ToDosViewModel(database: mainToDosDatabase!)
+        viewModel = ToDosViewModel(database: mainToDosDatabase ?? ToDosDataBase())
         viewModel.delegate = self
     }
     
@@ -53,8 +53,22 @@ extension ToDosViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellData", for: indexPath)
+
         let toDoForTable = arrayToUse[indexPath.row]
-        cell.textLabel?.text = toDoForTable.title
+        if toDoForTable.completed == true {
+            cell.textLabel?.text = " ✔︎ \(toDoForTable.title)"
+        } else {
+            cell.textLabel?.text = toDoForTable.title
+        }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.arrayToUse.remove(at: indexPath.row)
+            self.viewModel.deleteToDo(toDoToDeleteIndex: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
 }
