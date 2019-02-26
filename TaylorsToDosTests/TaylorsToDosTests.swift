@@ -43,6 +43,17 @@ class TaylorsToDosTests: XCTestCase {
         // then to do's data is increased by one
     }
 
+    
+    func testDelete() {
+        //given
+        sut.start()
+        sut.delegate = ToDosDelegateMock()
+        // when a To Do is deleted by a user
+        sut.deleteToDo(toDoToDeleteIndex: 0)
+        // the list count is updated to not include the deleted to-do
+        XCTAssertTrue(sut.delegate?.arrayToUse.count == 2)
+    }
+    
 }
 
 class ToDosDataBaseMock: ToDosDataBaseProtocol {
@@ -54,7 +65,10 @@ class ToDosDataBaseMock: ToDosDataBaseProtocol {
     
     func addToDoToData(newToDo: ToDo) {
         dataToDos.append(newToDo)
-        print("A new To do was added!")
+    }
+    
+    func removeToDoData(byeToDoIndex: Int) {
+        dataToDos.remove(at: byeToDoIndex)
     }
 }
 
