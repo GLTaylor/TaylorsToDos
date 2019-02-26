@@ -10,7 +10,7 @@ import Foundation
 
 
 class ToDosDataBase: ToDosDataBaseProtocol {
-    internal var dataToDos: [ToDo] = [ToDo(title: "dummy", completed: false), ToDo(title: "dummy1", completed: true), ToDo(title: "dummyAgain", completed: false)]
+    internal var dataToDos: [ToDo] = [ToDo(title: "Learn RxSwift", completed: false), ToDo(title: "Cook Dinner", completed: true), ToDo(title: "Stay Alive", completed: false)]
     
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void) {
         completionHandler(dataToDos, nil)

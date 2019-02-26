@@ -21,7 +21,7 @@ class MakeNewToDoViewController: UIViewController {
     
     override func viewDidLoad() {
          super.viewDidLoad()
-         viewModel = MakeNewToDoViewModel(database: mainToDosDatabase!)
+         viewModel = MakeNewToDoViewModel(database: mainToDosDatabase ?? ToDosDataBase())
     }
     
     @IBAction func addThisToDo(_sender: UIButton) {

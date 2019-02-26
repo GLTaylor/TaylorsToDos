@@ -86,16 +86,32 @@
                                     <segue destination="XZz-db-y2g" kind="show" id="OSm-ho-xh7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of new To-Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-17-01A">
+                                <rect key="frame" x="117" y="93" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPN-ps-8hG">
+                                <rect key="frame" x="141" y="304" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wGs-Bj-uNU" firstAttribute="top" secondItem="1ce-U6-Bec" secondAttribute="bottom" constant="152" id="9aS-lO-e6n"/>
+                            <constraint firstItem="TQK-QG-1i8" firstAttribute="top" secondItem="8ub-17-01A" secondAttribute="bottom" constant="18" id="Fyd-jd-ka3"/>
                             <constraint firstItem="TQK-QG-1i8" firstAttribute="leading" secondItem="WhS-eA-FHO" secondAttribute="leading" constant="20" id="IcC-i6-8nN"/>
                             <constraint firstItem="1ce-U6-Bec" firstAttribute="centerX" secondItem="aq6-qb-2I7" secondAttribute="centerX" id="Kra-x5-Mpw"/>
                             <constraint firstItem="wGs-Bj-uNU" firstAttribute="centerX" secondItem="aq6-qb-2I7" secondAttribute="centerX" id="Ue8-ve-Rzq"/>
                             <constraint firstItem="1ce-U6-Bec" firstAttribute="top" secondItem="TQK-QG-1i8" secondAttribute="bottom" constant="80" id="jB4-9T-dzw"/>
                             <constraint firstItem="TQK-QG-1i8" firstAttribute="top" secondItem="WhS-eA-FHO" secondAttribute="top" constant="112" id="myV-si-DjU"/>
+                            <constraint firstItem="kPN-ps-8hG" firstAttribute="centerX" secondItem="aq6-qb-2I7" secondAttribute="centerX" id="qAu-Pa-qm3"/>
                             <constraint firstItem="WhS-eA-FHO" firstAttribute="trailing" secondItem="TQK-QG-1i8" secondAttribute="trailing" constant="20" id="tcz-Fw-vHJ"/>
+                            <constraint firstItem="kPN-ps-8hG" firstAttribute="top" secondItem="1ce-U6-Bec" secondAttribute="bottom" constant="31" id="toZ-CQ-YPc"/>
+                            <constraint firstItem="8ub-17-01A" firstAttribute="centerX" secondItem="aq6-qb-2I7" secondAttribute="centerX" id="ugs-nA-fSZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WhS-eA-FHO"/>
                     </view>
@@ -106,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ci-mE-cO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="-56"/>
+            <point key="canvasLocation" x="2824.8000000000002" y="-56.221889055472268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="obn-i5-0Qu">
