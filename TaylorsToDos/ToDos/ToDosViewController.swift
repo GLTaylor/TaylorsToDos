@@ -10,22 +10,16 @@ import Foundation
 import UIKit
 
 class ToDosViewController: UIViewController, ToDosViewModelDelegate {
-    var arrayToUse: [ToDo] = []
-    
-    var mainToDosDatabase: ToDosDataBase? {
-        let delegate = UIApplication.shared.delegate as? AppDelegate
-        return delegate?.allToDosDataBase
-    }
-    
+       
     var viewModel: ToDosViewModel!
 
     @IBOutlet var toDosTable: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         toDosTable.delegate = self
         toDosTable.dataSource = self
-        viewModel = ToDosViewModel(database: mainToDosDatabase ?? ToDosDataBase())
+        viewModel = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
         viewModel.delegate = self
     }
     
@@ -33,14 +27,20 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         super.viewWillAppear(true)
         viewModel.start()
         toDosTable.reloadData()
-        print(arrayToUse)
     }
+    // MARK: - ToDosViewModelDelegate
+    
+    internal var arrayToUse: [ToDo] = []
     
     func dataIsReady() {
       print("The array to use is: \(self.arrayToUse)")
-      toDosTable.reloadData()
-    }    
+        DispatchQueue.main.async {
+            self.toDosTable.reloadData()
+        }
+    }
 }
+
+    // MARK: - TableViewExtension
 
 extension ToDosViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +52,7 @@ extension ToDosViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellData", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifier, for: indexPath)
 
         let toDoForTable = arrayToUse[indexPath.row]
         if toDoForTable.completed == true {

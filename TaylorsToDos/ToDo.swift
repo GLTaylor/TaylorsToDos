@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct ToDo {
+struct ToDo: Codable {
     var title: String
     var completed: Bool
+
 }
+
+

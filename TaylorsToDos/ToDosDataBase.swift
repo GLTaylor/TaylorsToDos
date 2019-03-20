@@ -10,10 +10,27 @@ import Foundation
 
 
 class ToDosDataBase: ToDosDataBaseProtocol {
-    internal var dataToDos: [ToDo] = [ToDo(title: "Learn RxSwift", completed: false), ToDo(title: "Cook Dinner", completed: true), ToDo(title: "Stay Alive", completed: false)]
+    private(set) var dataToDos = [ToDo]()
     
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void) {
-        completionHandler(dataToDos, nil)
+        var task: URLSessionTask?
+        guard let path = URL(string: "https://jsonplaceholder.typicode.com/todos") else { return }
+        task?.cancel()
+        task = URLSession.shared.dataTask(with: path) { data, _, error in
+            guard let data = data else {
+                completionHandler(nil, error)
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let toDosFromTheWeb = try decoder.decode([ToDo].self, from: data)
+                self.dataToDos = toDosFromTheWeb
+                completionHandler(toDosFromTheWeb, nil)
+            } catch {
+                completionHandler(nil, error)
+            }
+        }
+        task!.resume()
     }
     
     func addToDoToData(newToDo: ToDo) {
@@ -29,7 +46,7 @@ class ToDosDataBase: ToDosDataBaseProtocol {
 }
 
 protocol ToDosDataBaseProtocol {
-    var dataToDos: [ToDo] {get set}
+    var dataToDos: [ToDo] { get }
     
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void)
     func addToDoToData(newToDo: ToDo)

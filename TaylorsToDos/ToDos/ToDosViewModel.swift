@@ -8,27 +8,24 @@
 
 import Foundation
 
-class ToDosViewModel {
-    var delegate: ToDosViewModelDelegate?
-    private var array: [ToDo] = [] {
+class ToDosViewModel: ToDosViewModelType {
+    weak var delegate: ToDosViewModelDelegate?
+    var cellIdentifier: String
+    var array: [ToDo] = [] {
         didSet {
             self.delegate?.arrayToUse = array
         }
     }
-    private let db: ToDosDataBaseProtocol
+    var db: ToDosDataBaseProtocol
  
     init(database: ToDosDataBaseProtocol) {
         self.db = database
+        cellIdentifier = "CellData"
     }
     
     func start() {
-        db.readAll { (data, error) in
-            guard let data = data else {
-                return
-            }
-            self.array = data
-            self.delegate?.dataIsReady()
-        }
+        self.array =  db.dataToDos
+        self.delegate?.dataIsReady()
     }
     
     func deleteToDo(toDoToDeleteIndex: Int) {
@@ -38,8 +35,14 @@ class ToDosViewModel {
     
 }
 
-protocol ToDosViewModelDelegate {
+protocol ToDosViewModelDelegate: class {
     var arrayToUse: [ToDo] {get set}
     func dataIsReady()
 }
 
+protocol ToDosViewModelType: class {
+    var array: [ToDo] { get set }
+    var db: ToDosDataBaseProtocol { get set }
+    func start()
+    func deleteToDo(toDoToDeleteIndex: Int)
+}

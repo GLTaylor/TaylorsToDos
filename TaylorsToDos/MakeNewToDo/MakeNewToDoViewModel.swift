@@ -7,10 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
 class MakeNewToDoViewModel {
     
     private let db: ToDosDataBase
+    var mainToDosDatabase: ToDosDataBase? {
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        return delegate?.allToDosDataBase
+    }
     
     init(database: ToDosDataBase) {
         self.db = database
