@@ -39,7 +39,7 @@ class ToDosViewModel {
 }
 
 protocol ToDosViewModelDelegate {
-    var arrayToUse: [ToDo] {get set}
+    var arrayToUse: ([ToDo]) {get set}
     func dataIsReady()
 }
 

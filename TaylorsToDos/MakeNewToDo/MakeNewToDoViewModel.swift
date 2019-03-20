@@ -9,7 +9,8 @@
 import Foundation
 
 class MakeNewToDoViewModel {
-    
+    var delegate: MakeNewToDoViewModelDelegate?
+
     private let db: ToDosDataBase
     
     init(database: ToDosDataBase) {
@@ -20,4 +21,7 @@ class MakeNewToDoViewModel {
         let newToDo = ToDo(title: textOfToDo, completed: completedState)
         db.addToDoToData(newToDo: newToDo)
     }
+}
+
+protocol MakeNewToDoViewModelDelegate {
 }

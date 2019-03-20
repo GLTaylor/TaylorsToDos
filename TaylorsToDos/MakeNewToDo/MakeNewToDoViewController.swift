@@ -14,6 +14,7 @@ class MakeNewToDoViewController: UIViewController {
     @IBOutlet var toDoTextField: UITextField!
     @IBOutlet var completedSwitch: UISwitch!
     var viewModel: MakeNewToDoViewModel!
+    // viewModel.delegate = self
     var mainToDosDatabase: ToDosDataBase? {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         return delegate?.allToDosDataBase
@@ -22,6 +23,7 @@ class MakeNewToDoViewController: UIViewController {
     override func viewDidLoad() {
          super.viewDidLoad()
          viewModel = MakeNewToDoViewModel(database: mainToDosDatabase ?? ToDosDataBase())
+        // viewModel.delegate = self
     }
     
     @IBAction func addThisToDo(_sender: UIButton) {
