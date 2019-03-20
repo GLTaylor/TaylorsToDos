@@ -11,7 +11,11 @@ import UIKit
 
 class ToDosViewController: UIViewController, ToDosViewModelDelegate {
        
-    var viewModel: ToDosViewModel!
+    var viewModel: ToDosViewModel! {
+        didSet {
+           viewModel.delegate = self
+        }
+    }
 
     @IBOutlet var toDosTable: UITableView!
 
@@ -19,8 +23,8 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         super.viewDidLoad()
         toDosTable.delegate = self
         toDosTable.dataSource = self
-        viewModel = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
-        viewModel.delegate = self
+//        viewModel = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
+//        viewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
