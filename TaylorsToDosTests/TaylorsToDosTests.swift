@@ -51,7 +51,7 @@ class TaylorsToDosTests: XCTestCase {
         // when a To Do is deleted by a user
         sut.deleteToDo(toDoToDeleteIndex: 0)
         // the list count is updated to not include the deleted to-do
-        XCTAssertTrue(sut.delegate?.arrayToUse.count == 2)
+        XCTAssertTrue(sut.array.count == 2)
     }
     
 }

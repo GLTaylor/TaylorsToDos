@@ -33,12 +33,6 @@ class LoadingToDos: UIViewController, UIApplicationDelegate {
         })
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ToDosViewController") as? ToDosViewController else { return }
-        let viewModelToSegue = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
-        vc.viewModel = viewModelToSegue
-    }
-
     @IBAction func seeToDos() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ToDosViewController") as? ToDosViewController else { return }
         let viewModelToSegue = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
