@@ -19,6 +19,8 @@
 		124FD55A222009160096770F /* ToDosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD559222009150096770F /* ToDosViewModel.swift */; };
 		124FD55C222009230096770F /* ToDosDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD55B222009230096770F /* ToDosDataBase.swift */; };
 		124FD55E22200F590096770F /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124FD55D22200F590096770F /* ToDo.swift */; };
+		7E62E13DA884B6469D88AEFD /* Pods_TaylorsToDosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07832888A5D5A635972BE417 /* Pods_TaylorsToDosTests.framework */; };
+		AAD97DF6097A903C206C239C /* Pods_TaylorsToDos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC60381401D49E9153B3CD2 /* Pods_TaylorsToDos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07832888A5D5A635972BE417 /* Pods_TaylorsToDosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaylorsToDosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12011A8031BE6D8A9515A38E /* Pods-TaylorsToDos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaylorsToDos.release.xcconfig"; path = "Target Support Files/Pods-TaylorsToDos/Pods-TaylorsToDos.release.xcconfig"; sourceTree = "<group>"; };
 		1205F7AF2223FD50007CB809 /* MakeNewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewToDoViewController.swift; sourceTree = "<group>"; };
 		1205F7B12224022C007CB809 /* MakeNewToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewToDoViewModel.swift; sourceTree = "<group>"; };
 		120BB40E2236655300BDAAF1 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,10 @@
 		124FD559222009150096770F /* ToDosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosViewModel.swift; sourceTree = "<group>"; };
 		124FD55B222009230096770F /* ToDosDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosDataBase.swift; sourceTree = "<group>"; };
 		124FD55D22200F590096770F /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		2DC60381401D49E9153B3CD2 /* Pods_TaylorsToDos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaylorsToDos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42AF7B2A255F0D117CF27E43 /* Pods-TaylorsToDosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaylorsToDosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaylorsToDosTests/Pods-TaylorsToDosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		900E067FAB552DC6FBA0AF76 /* Pods-TaylorsToDos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaylorsToDos.debug.xcconfig"; path = "Target Support Files/Pods-TaylorsToDos/Pods-TaylorsToDos.debug.xcconfig"; sourceTree = "<group>"; };
+		C8D96C4F9DC11BB31A619937 /* Pods-TaylorsToDosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaylorsToDosTests.release.xcconfig"; path = "Target Support Files/Pods-TaylorsToDosTests/Pods-TaylorsToDosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD97DF6097A903C206C239C /* Pods_TaylorsToDos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E62E13DA884B6469D88AEFD /* Pods_TaylorsToDosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,8 @@
 				124FD4EB221DBFEB0096770F /* TaylorsToDos */,
 				124FD54E221EC1700096770F /* TaylorsToDosTests */,
 				124FD4EA221DBFEB0096770F /* Products */,
+				3CE4973AD9B71CF1569C8794 /* Pods */,
+				F7B0AB5209C00EE81CA3A238 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +150,27 @@
 			path = TaylorsToDosTests;
 			sourceTree = "<group>";
 		};
+		3CE4973AD9B71CF1569C8794 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				900E067FAB552DC6FBA0AF76 /* Pods-TaylorsToDos.debug.xcconfig */,
+				12011A8031BE6D8A9515A38E /* Pods-TaylorsToDos.release.xcconfig */,
+				42AF7B2A255F0D117CF27E43 /* Pods-TaylorsToDosTests.debug.xcconfig */,
+				C8D96C4F9DC11BB31A619937 /* Pods-TaylorsToDosTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7B0AB5209C00EE81CA3A238 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DC60381401D49E9153B3CD2 /* Pods_TaylorsToDos.framework */,
+				07832888A5D5A635972BE417 /* Pods_TaylorsToDosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 124FD4FB221DBFEB0096770F /* Build configuration list for PBXNativeTarget "TaylorsToDos" */;
 			buildPhases = (
+				C28F8C2567085FF3EF76B15E /* [CP] Check Pods Manifest.lock */,
 				124FD4E5221DBFEB0096770F /* Sources */,
 				124FD4E6221DBFEB0096770F /* Frameworks */,
 				124FD4E7221DBFEB0096770F /* Resources */,
+				713CB1CEE5A7615C27F96689 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 124FD554221EC1700096770F /* Build configuration list for PBXNativeTarget "TaylorsToDosTests" */;
 			buildPhases = (
+				359B34B7D751855DF2113FEE /* [CP] Check Pods Manifest.lock */,
 				124FD549221EC1700096770F /* Sources */,
 				124FD54A221EC1700096770F /* Frameworks */,
 				124FD54B221EC1700096770F /* Resources */,
+				84580284C8E0722F50AC94F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +270,101 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		359B34B7D751855DF2113FEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaylorsToDosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		713CB1CEE5A7615C27F96689 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaylorsToDos/Pods-TaylorsToDos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaylorsToDos/Pods-TaylorsToDos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84580284C8E0722F50AC94F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaylorsToDosTests/Pods-TaylorsToDosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaylorsToDosTests/Pods-TaylorsToDosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28F8C2567085FF3EF76B15E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaylorsToDos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		124FD4E5221DBFEB0096770F /* Sources */ = {
@@ -406,6 +538,7 @@
 		};
 		124FD4FC221DBFEB0096770F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 900E067FAB552DC6FBA0AF76 /* Pods-TaylorsToDos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -425,6 +558,7 @@
 		};
 		124FD4FD221DBFEB0096770F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12011A8031BE6D8A9515A38E /* Pods-TaylorsToDos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -444,6 +578,7 @@
 		};
 		124FD555221EC1700096770F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42AF7B2A255F0D117CF27E43 /* Pods-TaylorsToDosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +599,7 @@
 		};
 		124FD556221EC1700096770F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D96C4F9DC11BB31A619937 /* Pods-TaylorsToDosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

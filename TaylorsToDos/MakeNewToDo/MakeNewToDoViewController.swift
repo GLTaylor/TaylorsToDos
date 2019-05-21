@@ -1,19 +1,16 @@
-//
-//  MakeNewToDoViewController.swift
-//  TaylorsToDos
-//
-//  Created by Taylor Lindsay on 2/25/19.
-//  Copyright © 2019 Taylor Lindsay at Babbel. All rights reserved.
-//
-
 import Foundation
 import UIKit
+import RxSwift
+// make textfield an observable and activate button based on it
+// make list itself and observable?
 
 class MakeNewToDoViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var toDoTextField: UITextField!
     @IBOutlet var completedSwitch: UISwitch!
     @IBOutlet var addButton: UIButton!
+
+    let bag = DisposeBag()
     
  
     var viewModel: MakeNewToDoViewModel!

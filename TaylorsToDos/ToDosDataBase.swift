@@ -1,11 +1,3 @@
-//
-//  ToDosDataBase.swift
-//  TaylorsToDos
-//
-//  Created by Taylor Lindsay on 2/22/19.
-//  Copyright © 2019 Taylor Lindsay at Babbel. All rights reserved.
-//
-
 import Foundation
 
 

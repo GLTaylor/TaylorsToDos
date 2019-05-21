@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class LoadingToDos: UIViewController, UIApplicationDelegate {
     var toDosDataBase: ToDosDataBaseProtocol? {
@@ -27,20 +28,33 @@ class LoadingToDos: UIViewController, UIApplicationDelegate {
                     print("WE HAVE GONE WRONG")
                     return
                 }
-                self?.seeToDos()
+                self?.performSegue(withIdentifier: "SkipNav", sender: nil)
                 print(array)
             }
         })
     }
 
-    @IBAction func seeToDos() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ToDosViewController") as? ToDosViewController else { return }
-        let viewModelToSegue = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
-        vc.viewModel = viewModelToSegue
-        vc.viewModel.delegate = vc
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SkipNav" {
+            let vc = segue.destination as! UINavigationController
+            let viewModelToSegue = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
+            let usableVc = vc.topViewController as! ToDosViewController
+            usableVc.viewModel = viewModelToSegue
+            usableVc.viewModel.delegate = usableVc
+        }
 
-        performSegue(withIdentifier: "Loaded", sender: nil)
-    }
+}
+
+
+//    @IBAction func seeToDos() {
+//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ToDosViewController") as? ToDosViewController else { return }
+//        let viewModelToSegue = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
+//        vc.viewModel = viewModelToSegue
+//        vc.viewModel.delegate = vc
+//        self.present(navigationController?, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+//        navigationController?.present(vc, animated: true, completion: nil)
+////        self.present(vc, animated: true, completion: nil)
+//    }
 
 }
 

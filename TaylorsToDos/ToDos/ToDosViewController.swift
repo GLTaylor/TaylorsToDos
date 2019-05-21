@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class ToDosViewController: UIViewController, ToDosViewModelDelegate {
        
@@ -23,8 +24,6 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         super.viewDidLoad()
         toDosTable.delegate = self
         toDosTable.dataSource = self
-//        viewModel = ToDosViewModel(database: ((UIApplication.shared.delegate as? AppDelegate)?.allToDosDataBase)!)
-//        viewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
