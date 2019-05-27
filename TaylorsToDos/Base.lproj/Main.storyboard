@@ -88,9 +88,6 @@
                                 <state key="disabled">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="addThisToDoWith_sender:" destination="HMx-ws-C3j" eventType="touchUpInside" id="fMx-PA-UvC"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of new To-Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-17-01A">
                                 <rect key="frame" x="117" y="137" width="141" height="21"/>

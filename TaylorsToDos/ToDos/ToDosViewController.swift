@@ -22,8 +22,8 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        toDosTable.delegate = self
-        toDosTable.dataSource = self
+        setUpTableView()
+//        bindOutputs()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,15 +31,23 @@ class ToDosViewController: UIViewController, ToDosViewModelDelegate {
         viewModel.start()
         toDosTable.reloadData()
     }
-    // MARK: - ToDosViewModelDelegate
-    
+
     internal var arrayToUse: [ToDo] = []
     
     func dataIsReady() {
-      print("The array to use is: \(self.arrayToUse)")
         DispatchQueue.main.async {
             self.toDosTable.reloadData()
         }
+    }
+
+
+//    func bindOutputs() {
+//
+//    }
+
+    func setUpTableView() {
+        toDosTable.delegate = self
+        toDosTable.dataSource = self
     }
 }
 

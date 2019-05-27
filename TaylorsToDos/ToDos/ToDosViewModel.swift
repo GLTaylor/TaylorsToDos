@@ -1,39 +1,7 @@
-//
-//  ToDosViewModel.swift
-//  TaylorsToDos
-//
-//  Created by Taylor Lindsay on 2/22/19.
-//  Copyright © 2019 Taylor Lindsay at Babbel. All rights reserved.
-//
-
 import Foundation
+import RxSwift
+import RxCocoa
 
-class ToDosViewModel: ToDosViewModelType {
-    weak var delegate: ToDosViewModelDelegate?
-    var cellIdentifier: String
-    var array: [ToDo] = [] {
-        didSet {
-            self.delegate?.arrayToUse = array
-        }
-    }
-    var db: ToDosDataBaseProtocol
- 
-    init(database: ToDosDataBaseProtocol) {
-        self.db = database
-        cellIdentifier = "CellData"
-    }
-    
-    func start() {
-        self.array =  db.dataToDos
-        self.delegate?.dataIsReady()
-    }
-    
-    func deleteToDo(toDoToDeleteIndex: Int) {
-        self.array.remove(at: toDoToDeleteIndex)
-        db.removeToDoData(byeToDoIndex: toDoToDeleteIndex)
-    }
-    
-}
 
 protocol ToDosViewModelDelegate: class {
     var arrayToUse: [ToDo] {get set}
@@ -46,3 +14,35 @@ protocol ToDosViewModelType: class {
     func start()
     func deleteToDo(toDoToDeleteIndex: Int)
 }
+
+class ToDosViewModel: ToDosViewModelType {
+    weak var delegate: ToDosViewModelDelegate?
+    var cellIdentifier: String
+    var array: [ToDo] = [] {
+        didSet {
+            self.delegate?.arrayToUse = array
+        }
+    }
+    let bag = DisposeBag()
+    var db: ToDosDataBaseProtocol
+
+    init(database: ToDosDataBaseProtocol) {
+        self.db = database
+        cellIdentifier = "CellData"
+    }
+    
+    func start() {
+        db.rxswiftToDos.asObservable().subscribe(onNext: {[weak self] todos in
+            self?.array = todos
+        }).disposed(by: bag)
+        self.delegate?.dataIsReady()
+    }
+    
+    func deleteToDo(toDoToDeleteIndex: Int) {
+        self.array.remove(at: toDoToDeleteIndex)
+        db.removeToDoData(byeToDoIndex: toDoToDeleteIndex)
+    }
+    
+}
+
+

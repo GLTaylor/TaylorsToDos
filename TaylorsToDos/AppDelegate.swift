@@ -8,16 +8,21 @@
 
 import UIKit
 import CoreData
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let bag = DisposeBag()
 
     let allToDosDataBase = ToDosDataBase()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        allToDosDataBase.rxswiftToDos.asObservable().subscribe(onNext: { todo in
+//            print(todo)
+//        }).disposed(by: bag)
         return true
     }
 

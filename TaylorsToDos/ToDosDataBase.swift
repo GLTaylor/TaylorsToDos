@@ -1,12 +1,13 @@
 import Foundation
+import RxSwift
 
 
 class ToDosDataBase: ToDosDataBaseProtocol {
-    private(set) var dataToDos = [ToDo]()
-    
+    internal var rxswiftToDos = Variable<[ToDo]>([])
+
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void) {
         var task: URLSessionTask?
-        guard let path = URL(string: "https://jsonplaceholder.typicode.com/todos") else { return }
+        guard let path = URL(string: "https://raw.githubusercontent.com/GLTaylor/TaylorsToDos/develop/db.json") else { return }
         task?.cancel()
         task = URLSession.shared.dataTask(with: path) { data, _, error in
             guard let data = data else {
@@ -16,7 +17,7 @@ class ToDosDataBase: ToDosDataBaseProtocol {
             let decoder = JSONDecoder()
             do {
                 let toDosFromTheWeb = try decoder.decode([ToDo].self, from: data)
-                self.dataToDos = toDosFromTheWeb
+                self.rxswiftToDos.value = toDosFromTheWeb
                 completionHandler(toDosFromTheWeb, nil)
             } catch {
                 completionHandler(nil, error)
@@ -24,22 +25,20 @@ class ToDosDataBase: ToDosDataBaseProtocol {
         }
         task!.resume()
     }
-    
+
     func addToDoToData(newToDo: ToDo) {
-        dataToDos.append(newToDo)
-        print("A new To do was added!")
+        rxswiftToDos.value.append(newToDo)
     }
     
     func removeToDoData(byeToDoIndex: Int) {
-        dataToDos.remove(at: byeToDoIndex)
-        print("A To Do was removed")
+        rxswiftToDos.value.remove(at: byeToDoIndex)
     }
     
 }
 
 protocol ToDosDataBaseProtocol {
-    var dataToDos: [ToDo] { get }
-    
+    var rxswiftToDos: Variable<[ToDo]> { get }
+
     func readAll(completionHandler: @escaping ([ToDo]?, Error?) -> Void)
     func addToDoToData(newToDo: ToDo)
     func removeToDoData(byeToDoIndex: Int)

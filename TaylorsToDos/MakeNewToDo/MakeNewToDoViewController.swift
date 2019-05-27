@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 import RxSwift
-// make textfield an observable and activate button based on it
-// make list itself and observable?
+import RxCocoa
+
 
 class MakeNewToDoViewController: UIViewController, UITextFieldDelegate {
     
@@ -10,42 +10,48 @@ class MakeNewToDoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var completedSwitch: UISwitch!
     @IBOutlet var addButton: UIButton!
 
-    let bag = DisposeBag()
-    
+    private let bag = DisposeBag()
  
-    var viewModel: MakeNewToDoViewModel!
+    var viewModel: MakeNewToDoViewModelType!
     var mainToDosDatabase: ToDosDataBase? {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         return delegate?.allToDosDataBase
     }
     
     override func viewDidLoad() {
-         super.viewDidLoad()
-            toDoTextField.delegate = self
-            addButton.isUserInteractionEnabled = false
-         viewModel = MakeNewToDoViewModel(database: mainToDosDatabase ?? ToDosDataBase())
+        super.viewDidLoad()
+        viewModel = MakeNewToDoViewModel(database: mainToDosDatabase ?? ToDosDataBase())
+        bindInputs()
+        bindOutputs()
     }
-    
-    @IBAction func addThisToDo(_sender: UIButton) {
-        let text = toDoTextField.text
-        let completed = completedSwitch.isOn
-        viewModel.addNewToDo(textOfToDo: text!, completedState: completed)
-        navigationController?.popViewController(animated: true)
 
+    func bindInputs() {
+        toDoTextField.rx.text
+            .bind(to: viewModel.textInput)
+            .disposed(by: bag)
+
+         completedSwitch.rx.isOn
+            .bind(to: viewModel.isOnInput)
+            .disposed(by: bag)
+
+        addButton.rx.tap
+            .bind(to: viewModel.buttonTappedInput)
+            .disposed(by: bag)
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let text = (toDoTextField.text! as NSString).replacingCharacters(in: range, with: string)
-        
-        if !text.isEmpty{
-            addButton.isUserInteractionEnabled = true
-        } else {
-            addButton.isUserInteractionEnabled = false
-        }
-        return true
+
+
+    func bindOutputs() {
+        viewModel.isButtonEnabled
+            .drive(onNext: { isEnabled in
+            self.addButton.isEnabled = isEnabled
+        }).disposed(by: bag)
+
+        viewModel.toDoWasMade
+            .drive(onNext: {_ in
+            self.navigationController?.popViewController(animated: true)
+        }).disposed(by: bag)
     }
-    
+
 }
 
-// put viewModels in prepareForSegue, not initializing inside the ViewController 
+
